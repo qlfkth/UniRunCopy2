@@ -13,14 +13,18 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRigidbdy;//사용할 리지드바디 컴포넌트
     private Animator animator;//사용할 애니메이터 컴포넌트
-    private AudioSource platerAudio;//사용할 오디오 소스 컴포넌트
+    private AudioSource playerAudio;//사용할 오디오 소스 컴포넌트
 
 
 
     
     void Start()
     {
-        //초기화
+        //게임 오브젝트로부터 사용할 ㅅ컴포넌트들을 가져와 변수에 할당
+        playerRigidbdy = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
+
     }
 
 
@@ -36,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //트리거 콜라이더를 가진 장애물과의 충돌을 감지
+        //트리거 콜라이더를 가진 장애물과의 충돌을 감지,충돌했을때 딱 한번
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
