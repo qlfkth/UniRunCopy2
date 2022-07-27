@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         //마우스 왼쪽 버튼을 눌렀으며&&최대 점프 횟수(2)에 도달하지 않았다면
-        if (Input.GetMouseButton(0) && jumpCount < 2)
+        if (Input.GetMouseButtonDown(0) && jumpCount < 2)
         {
             //점프 횟수 증가
             jumpCount++;
@@ -61,12 +61,23 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        //사망처리
+        //애니메이터의 Dis 트리거 파라미터를 셋
+        animator.SetTrigger("Die");
+
+        //오디오 소스에 할당된 오디오 클립을 deathClip으로 변경
+        playerAudio.clip = deathClip;
+        //사망 효과음 재생
+        playerAudio.Play();
+
+        //속도를 제로(0,0)로 변경
+        playerRigidbdy.velocity = Vector2.zero;
+        //사망 상태를 true로 변경
+        isDead = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //트리거 콜라이더를 가진 장애물과의 충돌을 감지,충돌했을때 딱 한번
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

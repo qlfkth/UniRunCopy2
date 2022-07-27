@@ -376,9 +376,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/Test01.cs"
-"Assets/Scripts/Test02.cs"
-"Assets/Scripts/Test03.cs"
 "Assets/Simple 2D Platformer BE2/ReadMe/Scripts/ReadmeBE2.cs"
 -langversion:9.0
 
