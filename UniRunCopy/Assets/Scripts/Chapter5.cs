@@ -7,17 +7,14 @@ public class Chapter5 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     for(int i = 0; i < 2; i++)
+        int[] Score = new int[] { 10, 20, 30, 40, 50 };
+
+        foreach (int a in [5]/5)
         {
-            for (int j = 0; j <= i; j++) 
-            {
-                Debug.Log("*");
-            }
+            Debug.Log(a);
         }
-
-
-
     }
+   
 }
 
 
